@@ -1,5 +1,5 @@
 
-import Inter from 'next/font/google'
+import { Inter } from '@next/font/google'
 
 const interTight = Inter({
   subsets: ['latin'],
