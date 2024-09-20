@@ -7,14 +7,127 @@
 
 .tarefasMain{
     border: 1px solid rgba(234, 236, 240, 1);
-    width: Fixed (450px)px;
-    height: Hug (446px)px;
+    width: 450px;
+    height: 446px;
     top: 124px;
     left: 495px;
-    padding: 32px 0px 0px 0px;
+    padding: 32px;
     gap: 24px;
-    border-radius: 16px 0px 0px 0px;
-    border: 1px 0px 0px 0px;
+    border-radius: 16px;
     opacity: 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
 }
+
+.CheckTarefa{
+    width: 386px;
+    border: 2px dotted rgba(215, 221, 233, 1);
+    height: 56px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.nomesTarefas{
+ padding-left: 16px;
+}
+
+.titleTarefas{
+    color:rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sessaoTarefas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+}
+
+
+
+
+.checkbox {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .checkboxInput {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .checkbox label {
+    position: relative;
+    padding-left: 2.2em;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .checkbox label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 4px;
+    background: #FFF;
+    margin-right: 0.5em;
+    border: 1px solid #999;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  
+  .checkbox label::after {
+    content: "";    
+    position: absolute;
+    top: 50%;
+    left: 0.75em;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: #FFF;
+    background-image: url('../../../public/images/Icon.svg'); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    width: 0.9em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 0.8em; 
+    margin-top: 0.03em;
+    top: 10px;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .checkbox label:focus::before, 
+  .checkbox label:hover::before {
+    background: #DDD;
+  }
+  
+  .checkboxInput:checked + label::before {
+    background-color: rgba(160, 220, 246, 1);
+    border: 1px solid rgba(7, 150, 211, 1)
+  }
+  
+  .checkboxInput:checked + label::after {
+    opacity: 1; /* Mostrar checkmark quando marcado */
+  }
+  
