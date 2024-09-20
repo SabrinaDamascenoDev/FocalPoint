@@ -18,7 +18,8 @@ export default function Home() {
             <p className={styles.descricaoHome}>Segunda, 01 de dezembro de 2025</p>
         
         </header>
-        <hr className={styles.linhaHome}></hr>
+
+        <div></div>
     </div>
   );
 }
