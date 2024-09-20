@@ -1,8 +1,12 @@
+$primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+
+
 .mainContainer{
     display: flex;
     align-items: center; 
     justify-content: center; 
     height: 80vh;
+    flex-direction: column;
 }
 
 .tarefasMain{
@@ -55,7 +59,17 @@
 
 
 
-.checkbox {
+.CheckTarefa {
+    transition: background 0.2s ease; /* Transição suave ao passar o mouse */
+    
+    &:hover {
+      background: #F7F9FD; 
+      border: 2px solid #F7F9FD; 
+      cursor: pointer;
+    }
+  }
+  
+  .checkbox {
     display: inline-block;
     vertical-align: middle;
   }
@@ -117,17 +131,25 @@
     transition: all 0.2s ease;
   }
   
-  .checkbox label:focus::before, 
-  .checkbox label:hover::before {
-    background: #DDD;
-  }
+ 
   
   .checkboxInput:checked + label::before {
     background-color: rgba(160, 220, 246, 1);
-    border: 1px solid rgba(7, 150, 211, 1)
+    border: 1px solid rgba(7, 150, 211, 1);
   }
   
   .checkboxInput:checked + label::after {
-    opacity: 1; /* Mostrar checkmark quando marcado */
+    opacity: 1; 
   }
   
+  
+  .btnTarefas{
+    background: $primary-color;
+    width: 27%;
+    height: 54px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1.5%;
+    color: white;
+    font-weight: 500;
+  }
