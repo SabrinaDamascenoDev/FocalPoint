@@ -23,6 +23,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 50px;
 
 }
 
@@ -60,7 +61,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
 
 
 .CheckTarefa {
-    transition: background 0.2s ease; /* Transição suave ao passar o mouse */
+    transition: background 0.2s ease; 
     
     &:hover {
       background: #F7F9FD; 
@@ -152,6 +153,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     color: white;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
   }
 
   .CheckTarefaFinalizada{
@@ -165,4 +167,66 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
+
   }
+
+  .sessaoTarefasFinalizadas{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+  }
+
+  .checkboxFinalizadas {
+    display: flex; 
+    align-items: center; 
+  }
+.checkboxInputFinalizadas {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.checkboxFinalizadas label {
+    position: relative;
+    padding-left: 2.2em; 
+    cursor: pointer;
+    text-decoration: line-through; 
+    color: #aaa; 
+}
+
+.checkboxFinalizadas label::before {
+    content: "";    
+    position: absolute;
+    top: 50%;
+    left: 0.75em;
+    transform: translate(-50%, -50%);
+    background-image: url('../../../public/images/Icon.svg'); 
+    background-size: 65%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat; 
+    width: 1.2em; 
+    height: 1.2em; 
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    padding: 2px;
+}
+
+.checkboxFinalizadas input:checked + label::before {
+    background-color: rgba(160, 220, 246, 1); 
+    border: 1px solid rgba(7, 150, 211, 1);
+    opacity: 1;
+}
+
+.checkboxFinalizadas input:checked {
+    display: none; 
+}
+
+  
