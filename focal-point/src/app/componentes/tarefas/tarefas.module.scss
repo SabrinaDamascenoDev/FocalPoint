@@ -39,7 +39,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     padding-right: 16px;
 }
 
-.nomesTarefas{
+.nomesTarefas, .nomesTarefasFinalizadas{
  padding-left: 16px;
 }
 
@@ -131,7 +131,6 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     transition: all 0.2s ease;
   }
   
- 
   
   .checkboxInput:checked + label::before {
     background-color: rgba(160, 220, 246, 1);
@@ -152,4 +151,18 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     margin-top: 1.5%;
     color: white;
     font-weight: 500;
+    font-size: 16px;
+  }
+
+  .CheckTarefaFinalizada{
+    width: 386px;
+    border: 2px dotted rgba(215, 221, 233, 1);
+    height: 56px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }

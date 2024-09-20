@@ -28,43 +28,50 @@ export default function Tarefas() {
                 />
             </div>
 
-          <div className={styles.CheckTarefa}>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="chk2"
-                className={styles.checkboxInput}
-              />
-              <label htmlFor="chk2">Fazer um bolo</label>
+            <div className={styles.CheckTarefa} onClick={() => document.getElementById("chk2").click()}>
+                <div className={styles.checkbox}>
+                    <input
+                    type="checkbox"
+                    id="chk2"
+                    className={styles.checkboxInput}
+                    onClick={() => document.getElementById("chk2").click()}
+                    />
+                    <label htmlFor="chk2"  onClick={() => document.getElementById("chk2").click()}>Fazer um bolo</label>
+                </div>
+                <Image
+                    src={Trash}
+                    alt="Icon de um lixo"
+                    className={styles.iconsTarefas}
+                    onClick={(e) => e.stopPropagation()} 
+                />
             </div>
-            <Image
-              src={Trash}
-              alt="Icon de um lixo"
-              className={styles.iconsTarefas}
-            />
-          </div>
-          <div className={styles.CheckTarefa}>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="chk3"
-                className={styles.checkboxInput}
-              />
-              <label htmlFor="chk3">Fazer um bolo</label>
+
+          <div className={styles.CheckTarefa} onClick={() => document.getElementById("chk3").click()}>
+                <div className={styles.checkbox}>
+                    <input
+                    type="checkbox"
+                    id="chk3"
+                    className={styles.checkboxInput}
+                    onClick={() => document.getElementById("chk3").click()}
+                    />
+                    <label htmlFor="chk3"  onClick={() => document.getElementById("chk3").click()}>Fazer um bolo</label>
+                </div>
+                <Image
+                    src={Trash}
+                    alt="Icon de um lixo"
+                    className={styles.iconsTarefas}
+                    onClick={(e) => e.stopPropagation()} 
+                />
             </div>
-            <Image
-              src={Trash}
-              alt="Icon de um lixo"
-              className={styles.iconsTarefas}
-            />
-          </div>
-        </div>
+            </div>
         <p className={styles.titleTarefas}>Tarefas finalizadas</p>
 
         <div className={styles.sessaoTarefasFinalizadas}>
           <div className={styles.CheckTarefaFinalizada}>
-            <input type="checkbox" className={styles.inputTarefas}></input>
-            <label className={styles.nomesTarefas}>Fazer um bolo</label>
+            <div>
+                <input type="checkbox" className={styles.inputTarefasFinalizadas}></input>
+                <label className={styles.nomesTarefasFinalizadas}>Fazer um bolo</label>
+            </div>
             <Image
               src={Trash}
               alt="Icon de um lixo"
