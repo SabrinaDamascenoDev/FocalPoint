@@ -1,43 +1,49 @@
 $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
 
-
-.mainContainer{
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    height: 80vh;
-    flex-direction: column;
+.mainContainer {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: auto;
+  position: relative;
+  margin-top: 5%;
+  flex-direction: column;
 }
 
-.tarefasMain{
-    border: 1px solid rgba(234, 236, 240, 1);
-    width: 450px;
-    height: 446px;
-    top: 124px;
-    left: 495px;
-    padding: 32px;
-    gap: 24px;
-    border-radius: 16px;
-    opacity: 0px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 50px;
-
+.tarefasMain {
+  border: 1px solid rgba(234, 236, 240, 1);
+  width: 450px;
+  padding: 32px;
+  gap: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.CheckTarefa{
-    width: 386px;
-    border: 2px dotted rgba(215, 221, 233, 1);
-    height: 56px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
+.sessaoTarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // Space between tasks
+}
+
+.CheckTarefa {
+  width: 406px; 
+  border: 2px dotted rgba(215, 221, 233, 1);
+  height: 56px; // Fixed height for each task
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background 0.2s ease; 
+  
+  &:hover {
+      background: #F7F9FD; 
+      border: 2px solid #F7F9FD; 
+      cursor: pointer;
+  }
 }
 
 .nomesTarefas, .nomesTarefasFinalizadas{
@@ -49,14 +55,6 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
     font-size: 16px;
     font-weight: 400;
 }
-
-.sessaoTarefas{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 24px;
-}
-
 
 
 
@@ -157,7 +155,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
   }
 
   .CheckTarefaFinalizada{
-    width: 386px;
+    width: 406px;
     border: 2px dotted rgba(215, 221, 233, 1);
     height: 56px;
     border-radius: 8px;
