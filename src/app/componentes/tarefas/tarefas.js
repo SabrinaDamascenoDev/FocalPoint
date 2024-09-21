@@ -38,9 +38,10 @@ export default function Tarefas() {
                   className={styles.checkboxInput}
                   checked={task.completed}
                   onClick={() => toggleTask(task.id)}
+                  key={task.id}
                   readOnly
                 />
-                <label htmlFor={task.id}  onClick={() => toggleTask(task.id)}>{task.name}</label>
+                <label htmlFor={task.id}  key={task.id} onClick={() => toggleTask(task.id)}>{task.name}</label>
               </div>
               <Image
                 src={Trash}

@@ -24,13 +24,13 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
 .sessaoTarefas {
   display: flex;
   flex-direction: column;
-  gap: 24px; // Space between tasks
+  gap: 24px; 
 }
 
 .CheckTarefa {
-  width: 406px; 
+  width: 455px; 
   border: 2px dotted rgba(215, 221, 233, 1);
-  height: 56px; // Fixed height for each task
+  height: 56px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -155,7 +155,7 @@ $primary-color: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
   }
 
   .CheckTarefaFinalizada{
-    width: 406px;
+    width: 455px; 
     border: 2px dotted rgba(215, 221, 233, 1);
     height: 56px;
     border-radius: 8px;
